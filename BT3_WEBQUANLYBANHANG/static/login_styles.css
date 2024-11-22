@@ -1,0 +1,97 @@
+
+/* /* Chọn tất cả các thẻ h1 */
+h1 {
+     color: rgb(171, 19, 32);
+     text-align: center;
+   }
+   
+   /* Chọn các phần tử có class là "container" */
+   .container {
+     background-color: #f0f0f0;
+     padding: 20px;
+   }
+
+   body {
+     font-family: Arial, sans-serif;
+     background-image: url('nen.jpeg'); 
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     height: 100vh; /* Chiều cao bằng chiều cao viewport */
+     margin: 0;
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
+   
+   .login-form {
+    width: 320px; /* Điều chỉnh kích thước theo ý muốn */
+    height: 360px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    text-align: center;
+   }
+   .form-group1 {
+    display: flex;
+    align-items: center;
+}
+
+.label-left{
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+   
+   
+   .form-group input {
+    width: 300px;
+    height: 20px;
+    padding: 12px;
+    font-size: 17px;
+    position: relative;
+  }
+   
+   .form-control {
+     width: 300px;
+     padding: 40px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     box-sizing: border-box; /* Bao gồm padding và border vào chiều rộng */
+   }
+   
+   .btn {
+     display: block;
+     width: 100%;
+     padding: 10px;
+     background-color: #4CAF50;
+     color: #fff;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+   }
+   .input-id {
+    width: 300px; /* Điều chỉnh theo ý muốn */
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  button[type="submit"] {
+    background-color: #b40f12; 
+    color: rgb(245, 247, 249);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}  

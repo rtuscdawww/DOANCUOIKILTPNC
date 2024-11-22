@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sản phẩm</title>
+    <link rel="stylesheet" href="{{   
+        url_for('static', filename='dashboard1_.css') }}">
+</head>
+<body>
+    {% extends 'menu.html' %}
+
+    {% block content %}
+
+<br>
+    <h2>Thêm sản phẩm</h2>
+    <br>
+    <form action="{{ url_for('add_product') }}" method="POST">
+        <label for="name">Tên sản phẩm:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="price">Giá:</label><br>
+        <input type="number" id="price" name="price" step="1000" required><br><br>
+        
+        <label for="quantity">Số lượng:</label><br>
+        <input type="number" id="quantity" name="quantity" required><br><br>
+
+        <label for="image">Ảnh sản phẩm:</label>
+        <input type="file" name="image" accept="image/*"><br>
+        <br>
+        <button type="submit">Thêm sản phẩm</button>
+    </form>
+    
+    <br>
+
+    <!-- Example table of products -->
+   <!-- <h2>Danh sách sản phẩm</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Tên sản phẩm</th>
+                <th>Giá</th>
+                <th>Số lượng</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+            <tr>
+                <td>{{ product.name }}</td>
+                <td>{{ product.price }}</td>
+                <td>{{ product.quantity }}</td>
+                <td>-->
+                    <!-- Edit button -->
+                    <!--<a href="{{ url_for('edit_product', product_id=product.id) }}">Sửa</a>
+                    <!-- Delete button -->
+                    <!-- <form action="{{ url_for('delete_product', product_id=product.id) }}" method="POST" style="display:inline;">
+                        <button type="submit">Xóa</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table> -->
+
+    <br>
+    <a href="{{ url_for('index') }}">Trở lại trang chủ</a>
+    {% endblock %}
+</body>
+</html>

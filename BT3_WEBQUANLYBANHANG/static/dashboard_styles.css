@@ -1,0 +1,186 @@
+/* Reset một số kiểu mặc định của trình duyệt */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+  color: rgb(171, 19, 32);
+  text-align: center;
+}
+
+/* Chọn các phần tử có class là "container" */
+.container {
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+/* Kiểu chữ cho toàn bộ trang */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Tiêu đề trang */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #9f0909;
+}
+
+/* Form tìm kiếm */
+form {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form input {
+  padding: 10px;
+  width: 300px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin-left: 10px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+/* Thêm màu nền khi hover trên hàng */
+table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Các liên kết trong bảng */
+table a {
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+table a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+/* Nút Xóa */
+button[type="submit"] {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #c82333;
+}
+
+/* Flash messages */
+.flash-message {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.flash-message.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.flash-message.error, .flash-message.danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.flash-message.warning {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.flash-message.info {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+/* Thêm một số khoảng cách và kiểu cho các nút */
+button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive: Đảm bảo giao diện thân thiện với điện thoại */
+@media (max-width: 768px) {
+  table, form {
+      width: 100%;
+      padding: 10px;
+  }
+
+  table th, table td {
+      padding: 10px;
+  }
+
+  h1 {
+      font-size: 1.5rem;
+  }
+
+  form input {
+      width: 100%;
+  }
+
+  form button {
+      width: 100%;
+  }
+
+  button[type="submit"] {
+      width: 100%;
+  }
+}

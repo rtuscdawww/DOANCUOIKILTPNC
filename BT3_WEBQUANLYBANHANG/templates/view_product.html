@@ -1,0 +1,43 @@
+
+
+{% extends 'menu.html' %}
+
+{% block content %}
+<br>
+<h1>Thông tin sản phẩm</h1>
+<br>
+<br>
+<link rel="stylesheet" href="{{   
+    url_for('static', filename='view.css') }}">
+<table>
+    <tr>
+        <th>Tên sản phẩm</th>
+        <td>{{ product.name }}</td>
+    </tr>
+    <tr>
+        <th>Giá</th>
+        <td>{{ product.price | intcomma }} VNĐ</td>
+    </tr>
+    <tr>
+        <th>Số lượng</th>
+        <td>{{ product.quantity }}</td>
+    </tr>
+    {% if product.image_url %}
+    <tr>
+        <th>Ảnh sản phẩm</th>
+        <!-- Lấy ảnh từ thư mục static -->
+        <td>
+            {% if product.image_url %}
+              <img src="{{ url_for('static', filename=product.image_url) }}" alt="{{ product.name }} image" style="width: auto; height: auto;">
+            {% else %}
+              Không có ảnh
+            {% endif %}
+          </td>
+    </tr>
+    {% endif %}
+    <!-- Bạn có thể thêm các thông tin khác tại đây -->
+</table>
+<br>
+<a href="{{ url_for('index') }}">Quay lại danh sách sản phẩm</a>
+{% endblock %}
+

@@ -1,0 +1,17 @@
+<form method="GET" action="/">
+     <input type="text" name="search" placeholder="Tìm kiếm sản phẩm">
+     <button type="submit">Tìm kiếm</button>
+   </form>
+   {% if search_query %}
+  <p>Kết quả tìm kiếm cho: {{ search_query }}</p>
+{% endif %}
+
+{% if products %}
+  <ul>
+    {% for product in products %}
+      <li>{{ product.name }} - {{ product.price }}</li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>Không tìm thấy sản phẩm.</p>
+{% endif %}
